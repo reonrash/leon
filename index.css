@@ -1,0 +1,543 @@
+* {
+    box-sizing: border-box;
+    
+}
+[data-scroll] {
+    transition: all 1.2s ;
+  }
+  [data-scroll="in"] {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  [data-scroll="out"] {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-x:hidden;
+    
+}
+h1, h2, h3, h4, p, a, li {
+    
+    margin: 0;
+}
+p {
+    word-break: break-word;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family:"Open Sans", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    position: absolute;
+    background-color: black;
+   
+    
+}
+
+nav {
+    padding: 8px;
+}
+
+.logo {
+    float: left;
+    padding: 8px;
+    margin-left: 16px;
+    margin-top: 8px;
+}
+
+.logo a {
+  
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0px;
+    text-decoration: line-through;
+    color: rgb(246 , 64, 79);
+}
+
+nav ul {
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    
+    float: left;
+}
+
+nav ul li:not(:first-child) {
+    margin-left: 48px;
+}
+
+nav ul li:last-child {
+    margin-right: 24px;
+}
+
+nav ul li a {
+    display: inline-block;
+    outline: none;
+    color: rgb(48,188,201);
+  
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+}
+nav ul li a:hover {
+    color: rgb(250,218,128);
+    text-decoration: line-through;
+    
+}
+.encasement {
+    width: 100%;
+    height: 100%;
+}
+
+.row1 {
+    height: 98vh;
+    position: relative;
+    background-color: rgb(250, 245, 231);
+    margin: .5em;
+    
+
+}
+
+.intropic {
+    position: absolute;
+    bottom: -.5%;
+    
+}
+.outer {
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+}
+
+
+.row2 {
+    
+    position: relative;
+    z-index: 2;
+    
+   
+    color: rgb(250, 245, 231);
+    padding-bottom: 5.5em;
+    padding-top: 3.5em;
+    background-color: rgb(246 , 64, 79);
+    margin: 50vh 0;
+    
+   
+    background-size: cover;
+    background-position: center;
+ 
+}
+.row2:hover {
+    background-color: rgb(48,188,201);
+    transition: all .4s ease-out;
+}
+.introduction {
+    position: absolute;
+    color: rgb(246 , 64, 79);
+    left: 50%;
+    bottom: 10%;
+    border: 2px dotted rgb(246 , 64, 79);
+    padding: 2em;
+    font-size: 3em;
+    
+    
+    
+}
+.aboutme {
+    font-size: 2em;
+    padding: 1.5em;
+    z-index: 5;
+    
+}
+.bio {
+    z-index: 5;
+    position: relative;
+}
+.bio p {
+    
+    padding-left: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    
+    
+}
+.aboutpic img {
+    position: absolute;
+    bottom: 0;
+    right: -1px;
+    z-index: 0;
+}
+
+
+.pictitle {
+    text-align: center;
+    color: rgb(250,218,128);
+    padding-bottom: 1em;
+}
+
+.row3 {
+    position: relative;
+    text-align: center;
+    background-color: rgb(250, 245, 231);
+    margin: 1.5em;
+    padding: 3.5em;
+    background: url("spo.gif");
+    background-size: cover;
+    height: 80vh;
+    
+    
+}
+.incon {
+    list-style-type: none;
+    padding: 0;
+    display: inline-block;
+}
+.incon li {
+ 
+    font-weight: 300;
+    color: rgb(250, 245, 231);
+    
+}
+.incon li:nth-child(5) {
+    padding-top: 2em;
+}
+.incon li:hover {
+    color: rgb(250,218,128);
+    text-decoration: line-through;
+    
+}
+#textcontent {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1em;
+    color: rgb(250, 245, 231);
+    background-color: black;
+    font-weight: 300;
+    width: 100%;
+}
+
+
+.projtitle {
+    font-size: 2em;
+    padding-left: 1em;
+    padding-top: 2em;
+    padding-bottom: 1em;
+    color: rgba(248,243,227,0);
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;
+    background-color: rgb(250, 245, 231);
+    
+    
+    
+    
+}
+.description {
+    margin: 1em;
+    background-color: rgb(250,218,128);
+    padding: 1em;
+    
+    color: black;
+    box-shadow: 1px 1px rgb(250,218,128),2px 2px rgb(250,218,128), 3px 3px rgb(250,218,128);
+}
+.description:hover {
+    background-color: rgb(250, 245, 231);
+    transition: all .4s ease-out;
+    
+}
+.proj {
+    padding-left: 1.5em;
+    color: black;
+    background-color: rgb(250,218,128);
+}
+.title {
+    font-weight: 600;
+    font-size: 1em;
+    color: rgb(250, 245, 231);
+    padding-top: 1.5em;
+    text-decoration: underline;
+    
+}
+.row4 {
+    background-color: rgb(250,218,128);
+    padding-bottom: 5em;
+    margin: 50vh 0;
+    
+   
+
+}
+
+.row5 {
+    background-color: rgb(48,188,201);
+    margin: .5em;
+    padding: 1.5em;
+    position: relative;
+    
+}
+.row5:hover {
+    background-color: rgb(246 , 64, 79);
+    transition: all .4s ease-out;
+}
+.contacts ul {
+    list-style-type: none;
+    padding: 0;
+    padding-left: 1em;
+}
+.contitle {
+    padding-left: 1em;
+    padding-bottom: 1em;
+    color: rgb(250, 245, 231);
+}
+.contacts {
+    font-size: 3em;
+    color: rgb(250, 245, 231);
+    text-transform: uppercase;
+    
+    
+    font-weight: 800;
+    z-index: 5;
+    position: relative;
+}
+.contactpic img {
+    position: absolute;
+    height: 100%;;
+    right: -1px;
+    z-index: 0;
+    bottom: 0;
+}
+
+.text {
+     
+    color: rgba(248,243,227,0);
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: rgb(250,218,128);
+    font-style: normal;
+   
+  
+}
+.footer {
+    color: rgb(250, 245, 231);
+    font-weight: 300;
+    font-style: italic;
+}
+
+
+
+
+
+@media screen and (max-width: 864px) {
+    .logo {
+          padding: 0;
+    }
+
+    
+    .intropic img {
+        width: 60%;
+    }
+    .aboutpic img {
+        width: 50%;
+       
+        
+    }
+    .contacts {
+        font-size: 1.5em;
+       
+    }
+    nav ul li {
+        display: block;
+        
+        float: none;
+    }
+    nav ul {
+        padding-top: 0;
+        position: absolute;
+        top: 10%;
+        right: 0%;
+    }
+    nav ul li:not(:first-child) {
+        margin-left: 0;
+    }
+    .introduction {
+        left: unset;
+        right: 2%;
+        bottom: 15%;
+        font-size: 1.5em;
+    }
+    .text {
+     
+        color: rgb(250,218,128);
+        -webkit-text-stroke: 0;
+
+        
+        font-style: normal;
+       
+      
+    }
+    
+    
+   
+}
+@media screen and (max-width: 400px) {
+    .contacts {
+        font-size: 1.2em;
+    }
+  
+}
+@media screen and (max-width: 350px) {
+    .contacts {
+        font-size: 1em;
+    }
+}
+
+#nav:checked + .nav-btn {
+    transform: rotate(45deg);
+}
+
+#nav:checked + .nav-btn i {
+    background: rgb(246 , 64, 79);
+    transition: transform 0.2s ease;
+}
+
+#nav:checked + .nav-btn i:nth-child(1) {
+    transform: translateY(6px) rotate(180deg);
+}
+
+#nav:checked + .nav-btn i:nth-child(2) {
+    opacity: 0;
+}
+
+#nav:checked + .nav-btn i:nth-child(3) {
+    transform: translateY(-6px) rotate(90deg);
+}
+
+#nav:checked ~ .nav-wrapper {
+    z-index: 9990;
+    opacity: 1;
+}
+
+#nav:checked ~ .nav-wrapper ul li a {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hidden {
+    display: none;
+}
+.item img {
+    width: 20%;
+}
+/* .circle {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-color: black;
+    border-radius: 50%;
+    
+
+}
+.circle-1 {
+    background-color: rgb(48,188,201);
+    -webkit-animation-name: example; 
+    -webkit-animation-duration: 2s; 
+    animation-timing-function: linear;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+   
+}
+
+  @keyframes example {
+    0%   {background-color: rgb(48,188,201); transform: translateY(0);}
+    20%  {background-color: rgb(250,218,128); transform: translateY(-5px);}
+    40%  {background-color: black;transform: translateY(0);}
+    60%  {background-color: rgb(246 , 64, 79);transform: translateY(5px);}
+    100% {background-color: rgb(48,188,201); transform: translateY(0)}
+  }
+.circle-2 {
+    background-color: rgb(250,218,128);
+    -webkit-animation-name: example1; 
+    -webkit-animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-name: example1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes example1 {
+    0%   {background-color: rgb(250,218,128); transform: translateY(0);}
+    20%  {background-color: black; transform: translateY(-10px);}
+    40%  {background-color: rgb(246 , 64, 79); transform:translateY(0);}
+    60%  {background-color: rgb(48,188,201);transform: translateY(10px);}
+    100% {background-color: rgb(250,218,128); transform: translateY(0)}
+  }
+
+.circle-3 {
+    background-color: black;
+    -webkit-animation-name: example2; 
+    -webkit-animation-duration: 2s; 
+    animation-timing-function: linear;
+    animation-name: example2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes example2 {
+    0%   {background-color: rgb(48,188,201); transform: translateY(0);}
+    20%  {background-color: rgb(250,218,128); transform: translateY(-15px);}
+    40%  {background-color: black;transform: translateY(0);}
+    60%  {background-color: rgb(246 , 64, 79);transform: translateY(15px);}
+    100% {background-color: rgb(48,188,201); transform: translateY(0); }
+  }
+
+.circle-4 {
+    background-color: rgb(246 , 64, 79);
+    -webkit-animation-name: example4; 
+    -webkit-animation-duration: 2s; 
+    animation-timing-function: linear;
+    animation-name: example4;
+    animation-delay: 3s;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+   
+}
+@keyframes example4 {
+    0%   {background-color: rgb(48,188,201); transform: translateY(0);}
+    20%  {background-color: rgb(250,218,128); transform: translateY(-10px);}
+    40%  {background-color: black;transform: translateY(0);}
+    60%  {background-color: rgb(246 , 64, 79);transform: translateY(10px);}
+    100% {background-color: rgb(48,188,201); transform: translateY(0)}
+  }
+
+.circle-5 {
+    background-color: rgb(48,188,201);
+    -webkit-animation-name: example5; 
+    -webkit-animation-duration: 2s; 
+    animation-timing-function: linear;
+    animation-name: example5;
+    animation-delay: 4s;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes example5 {
+    0%   {background-color: rgb(48,188,201); transform: translateY(0);}
+    20%  {background-color: rgb(250,218,128); transform: translateY(-5px);}
+    40%  {background-color: black;transform: translateY(0);}
+    60%  {background-color: rgb(246 , 64, 79);transform: translateY(5px);}
+    100% {background-color: rgb(48,188,201); transform: translateY(0)}
+  } 
+  */
