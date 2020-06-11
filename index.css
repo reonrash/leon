@@ -146,6 +146,7 @@ nav ul li a:hover {
   border: 5px dotted rgb(250, 218, 128);
   padding: 2em;
   font-size: 3em;
+  z-index: -1;
 }
 .aboutme {
   font-size: 2em;
